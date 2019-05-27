@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { myReducer } from './reducers';
+import { myReducer, myExpander } from './reducers';
 
-let array1 = [
+let originalArray = [
   { position: 'analyst', name: 'Bob' },
   { position: 'boss', name: 'Sally' },
   { position: 'underling', name: 'Tristan' }
@@ -10,7 +10,10 @@ let array1 = [
 export default class App extends Component {
 
   componentDidMount() {
-    console.log(array1.reduce(myReducer, {}));
+    let reducedArray = originalArray.reduce(myReducer, {});
+    console.log('originalArray:', originalArray);
+    console.log('reducedArray:', reducedArray);
+    console.log('expandedArray:', Object.entries(reducedArray).reduce(myExpander, []));
   }
 
   render() {
