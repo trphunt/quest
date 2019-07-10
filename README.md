@@ -5,7 +5,7 @@ Reduce is the fundamental array method. You implement every other array method i
 ```javascript
 [{ position: 'analyst', name: 'Bob' },
   { position:'boss', name: 'Sally' },
-  { position: 'underling', name: 'Tristan' }]  
+  { position: 'underling', name: 'Tristan' }]
 ```
 
 into
